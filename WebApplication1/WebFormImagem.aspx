@@ -21,7 +21,11 @@
             <asp:GridView runat="server" ID="GridImagens" AutoGenerateColumns="False">
                 <Columns>
                     <asp:BoundField DataField="Nome" HeaderText="Nome" />
-                    <asp:ImageField DataImageUrlField="Id" DataImageUrlFormatString="GenericHandlerLoadImagem.ashx?id={0}" HeaderText="Imagem" ControlStyle-Width="100px" ItemStyle-Height="100px">                        
+                    <asp:ImageField DataImageUrlField="Id"
+                         DataImageUrlFormatString="GenericHandlerLoadImagem.ashx?id={0}" 
+                        HeaderText="Imagem" 
+                        ControlStyle-Width="100px" 
+                        ItemStyle-Height="100px">                        
                     </asp:ImageField>
                 </Columns>
             </asp:GridView>
