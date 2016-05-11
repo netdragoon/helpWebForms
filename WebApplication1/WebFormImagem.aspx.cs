@@ -42,5 +42,13 @@ namespace WebApplication1
             db.SubmitChanges();
             Load_Grid();
         }
+
+        protected void GridImagens_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName.Equals("Alterar"))
+            {
+                LblEscolhido.Text = e.CommandArgument.ToString();
+            }
+        }
     }
 }

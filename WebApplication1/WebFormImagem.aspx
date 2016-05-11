@@ -18,18 +18,27 @@
             <asp:Button Text="Enviar" runat="server" ID="BtnEnviar" OnClick="BtnEnviar_Click" />
         </div>
         <div>
-            <asp:GridView runat="server" ID="GridImagens" AutoGenerateColumns="False">
+            <asp:GridView runat="server" ID="GridImagens" AutoGenerateColumns="False" OnRowCommand="GridImagens_RowCommand">
                 <Columns>
                     <asp:BoundField DataField="Nome" HeaderText="Nome" />
                     <asp:ImageField DataImageUrlField="Id"
-                         DataImageUrlFormatString="GenericHandlerLoadImagem.ashx?id={0}" 
-                        HeaderText="Imagem" 
-                        ControlStyle-Width="100px" 
-                        ItemStyle-Height="100px">                        
+                        DataImageUrlFormatString="GenericHandlerLoadImagem.ashx?id={0}"
+                        HeaderText="Imagem"
+                        ControlStyle-Width="100px"
+                        ItemStyle-Height="100px">
+                        <ControlStyle Width="100px"></ControlStyle>
+
+                        <ItemStyle Height="100px"></ItemStyle>
                     </asp:ImageField>
+                    <asp:TemplateField HeaderText="Alterar" ShowHeader="False">
+                        <ItemTemplate>
+                            <asp:Button ID="Button1" runat="server" CausesValidation="false" CommandArgument='<%#Bind("Id") %>' CommandName="Alterar" Text="Alterar" />
+                        </ItemTemplate>
+                    </asp:TemplateField>
                 </Columns>
             </asp:GridView>
         </div>
+        <asp:Label Text="" ID="LblEscolhido" runat="server" />
     </form>
 </body>
 </html>

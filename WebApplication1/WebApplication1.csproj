@@ -124,6 +124,7 @@
     </Content>
     <Content Include="WebFormImagem.aspx" />
     <Content Include="GenericHandlerLoadImagem.ashx" />
+    <Content Include="WebFormTab.aspx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -241,6 +242,13 @@
     </Compile>
     <Compile Include="WebFormImagem.aspx.designer.cs">
       <DependentUpon>WebFormImagem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebFormTab.aspx.cs">
+      <DependentUpon>WebFormTab.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebFormTab.aspx.designer.cs">
+      <DependentUpon>WebFormTab.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
