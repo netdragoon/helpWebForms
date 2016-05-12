@@ -1,0 +1,21 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ClienteItems</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        <div> 
+            @Html.RadioButtonList("Clientes")
+        </div>
+        <button>Enviar</button>  
+    }
+</body>
+</html>

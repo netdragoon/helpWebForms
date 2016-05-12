@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{7E46640A-BEAE-411D-93D1-1C4FAF29F07B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication2", "WebApplication2\WebApplication2.csproj", "{22B69C13-96CF-4E5B-8D9F-8663F9454BD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Canducci.HtmlHelpers", "Canducci.HtmlHelpers\Canducci.HtmlHelpers.csproj", "{DB99080C-ADC4-4565-8896-C8013F1C830F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{7E46640A-BEAE-411D-93D1-1C4FAF29F07B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E46640A-BEAE-411D-93D1-1C4FAF29F07B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E46640A-BEAE-411D-93D1-1C4FAF29F07B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22B69C13-96CF-4E5B-8D9F-8663F9454BD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22B69C13-96CF-4E5B-8D9F-8663F9454BD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22B69C13-96CF-4E5B-8D9F-8663F9454BD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22B69C13-96CF-4E5B-8D9F-8663F9454BD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB99080C-ADC4-4565-8896-C8013F1C830F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB99080C-ADC4-4565-8896-C8013F1C830F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB99080C-ADC4-4565-8896-C8013F1C830F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB99080C-ADC4-4565-8896-C8013F1C830F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

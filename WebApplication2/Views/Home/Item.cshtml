@@ -1,0 +1,22 @@
+﻿@model WebApplication2.Models.Items
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Item</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        {
+            <div class="radio">
+                @Html.RadioButtonList("Status", "<p class=\"radio\">", "</p>")                
+            </div>
+        }
+        
+    </div>
+</body>
+</html>
