@@ -90,3 +90,41 @@ __Observe Here!!!__
  @Html.RadioButtonListFor(model => model.SelectId, ViewData["Status"] as RadioButtonList, null, "<div class=\"checkbox\">")
                     @Html.ValidationMessageFor(model => model.SelectId, "", new { @class = "text-danger" })
 ```
+###Or
+
+__Code__
+```Csharp
+[HttpGet()]
+public ActionResult Index()
+{
+    var id = (db.Selecting.Where(c => c.Status == true).FirstOrDefault().SelectId);
+    ViewData["Status"] = RadioButtonList.Create(db.Selecting.ToList(), "SelectId", "Name", id);
+    return View(db.Selecting.OrderBy(c => c.SelectId).ToArray());
+}
+```
+__View?__
+```Csharp
+@{ Layout = null; }
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/respond.js"></script>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        <div>
+            @Html.RadioButtonList("Status") 
+        </div>
+        <div>
+            <button type="submit">Alterar</button>
+        </div>
+    }
+</body>
+</html>
+```
