@@ -30,7 +30,8 @@ namespace WebApplication2.Controllers
         [HttpGet()]
         public ActionResult Index()
         {
-            SetViewData(db.Selecting.Where(c => c.Status == true).FirstOrDefault().SelectId);
+            var id = (db.Selecting.Where(c => c.Status == true).FirstOrDefault().SelectId);
+            ViewData["Status"] = RadioButtonList.Create(db.Selecting.ToList(), "SelectId", "Name", id);
             return View(db.Selecting.OrderBy(c => c.SelectId).ToArray());
         }
 
