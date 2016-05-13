@@ -11,6 +11,9 @@
         <EntityTypeShape EntityType="myDataBaseModel.Imagens" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="myDataBaseModel.sysdiagrams" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
         <AssociationConnector Association="myDataBaseModel.FK_Dados_Client" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="myDataBaseModel.Selecting" Width="1.5" PointX="5.375" PointY="0.75" />
+        <EntityTypeShape EntityType="myDataBaseModel.Options" Width="1.5" PointX="7.625" PointY="4.125" />
+        <AssociationConnector Association="myDataBaseModel.FK_Options_Selecting" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

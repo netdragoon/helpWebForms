@@ -4,10 +4,7 @@ namespace System.Web.Mvc
     public sealed class RadioButtonList
     {
         #region Constructs
-        public RadioButtonList()
-        {
-        }
-
+        
         public RadioButtonList(IEnumerable items, string dataValueField, string dataLabelField, object selectedValue = null)
         {
             Items = items;

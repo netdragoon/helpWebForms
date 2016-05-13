@@ -30,5 +30,7 @@ namespace WebApplication2.Models
         public virtual DbSet<Dados> Dados { get; set; }
         public virtual DbSet<Imagens> Imagens { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<Selecting> Selecting { get; set; }
+        public virtual DbSet<Options> Options { get; set; }
     }
 }

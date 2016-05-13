@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication2", "WebAppli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Canducci.HtmlHelpers", "Canducci.HtmlHelpers\Canducci.HtmlHelpers.csproj", "{DB99080C-ADC4-4565-8896-C8013F1C830F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Canducci.HtmlHelpers451", "Canducci.HtmlHelpers451\Canducci.HtmlHelpers451.csproj", "{4E1ABC1E-AB3D-40D5-9F2F-16AC334B3CE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Canducci.HtmlHelpers452", "Canducci.HtmlHelpers452\Canducci.HtmlHelpers452.csproj", "{D6F6C202-6639-4713-865F-A97A24EA52ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{DB99080C-ADC4-4565-8896-C8013F1C830F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB99080C-ADC4-4565-8896-C8013F1C830F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB99080C-ADC4-4565-8896-C8013F1C830F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E1ABC1E-AB3D-40D5-9F2F-16AC334B3CE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E1ABC1E-AB3D-40D5-9F2F-16AC334B3CE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E1ABC1E-AB3D-40D5-9F2F-16AC334B3CE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E1ABC1E-AB3D-40D5-9F2F-16AC334B3CE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6F6C202-6639-4713-865F-A97A24EA52ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6F6C202-6639-4713-865F-A97A24EA52ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6F6C202-6639-4713-865F-A97A24EA52ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6F6C202-6639-4713-865F-A97A24EA52ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
