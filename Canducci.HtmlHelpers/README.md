@@ -29,7 +29,7 @@ public async Task<ActionResult> Edit(Options option)
 }
 ```
 
-##View?
+__View?__
 ```Csharp
 @model WebApplication2.Models.Options
 @{ Layout = null; }
@@ -85,7 +85,7 @@ public async Task<ActionResult> Edit(Options option)
 </body>
 </html>
 ```
-###Observe Here!!!
+__Observe Here!!!__
 ```Csharp
  @Html.RadioButtonListFor(model => model.SelectId, ViewData["Status"] as RadioButtonList, null, "<div class=\"checkbox\">")
                     @Html.ValidationMessageFor(model => model.SelectId, "", new { @class = "text-danger" })
