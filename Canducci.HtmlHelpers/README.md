@@ -1,8 +1,30 @@
 # Canducci Mvc Helpers
 
+[![NuGet](https://img.shields.io/nuget/v/CanducciHtmlMvcHelpers.svg?style=plastic&label=version)](https://www.nuget.org/packages/CanducciHtmlMvcHelpers/)
+
+###Button Simply or Bootstrap Style
+
+    @Html.ButtonSubmit("Normal")
+
+    @Html.ButtonSubmit("Default", ButtonBootstrapStyle.Default)
+    @Html.ButtonSubmit("Primary", ButtonBootstrapStyle.Primary)
+    @Html.ButtonSubmit("Success", ButtonBootstrapStyle.Success)
+    @Html.ButtonSubmit("Info", ButtonBootstrapStyle.Info)
+    @Html.ButtonSubmit("Warning", ButtonBootstrapStyle.Warning)
+    @Html.ButtonSubmit("Danger", ButtonBootstrapStyle.Danger)
+    @Html.ButtonSubmit("Link", ButtonBootstrapStyle.Link)
+
+    @Html.ButtonSubmit("Default", ButtonBootstrapStyle.Default, Glyphicon.Ok)
+    @Html.ButtonSubmit("Primary", ButtonBootstrapStyle.Primary, Glyphicon.Ok)
+    @Html.ButtonSubmit("Success", ButtonBootstrapStyle.Success, Glyphicon.Pause)
+    @Html.ButtonSubmit("Info", ButtonBootstrapStyle.Info, Glyphicon.Ok)
+    @Html.ButtonSubmit("Warning", ButtonBootstrapStyle.Warning, Glyphicon.Ok)
+    @Html.ButtonSubmit("Danger", ButtonBootstrapStyle.Danger, Glyphicon.Ok)
+    @Html.ButtonSubmit("Link", ButtonBootstrapStyle.Link, Glyphicon.Ok)
+
+
 ###RadioButtonList
 
-[![NuGet](https://img.shields.io/nuget/v/CanducciHtmlMvcHelpers.svg?style=plastic&label=version)](https://www.nuget.org/packages/CanducciHtmlMvcHelpers/)
 
 ##NUGET
 
