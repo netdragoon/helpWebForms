@@ -2,6 +2,12 @@
 
 [![NuGet](https://img.shields.io/nuget/v/CanducciHtmlMvcHelpers.svg?style=plastic&label=version)](https://www.nuget.org/packages/CanducciHtmlMvcHelpers/)
 
+##NUGET
+
+```Csharp
+PM> Install-Package CanducciHtmlMvcHelpers
+```
+
 ###Button Simply or Bootstrap Style
 
     @Html.ButtonSubmit("Normal")
@@ -26,12 +32,7 @@
 ###RadioButtonList
 
 
-##NUGET
 
-```Csharp
-PM> Install-Package CanducciHtmlMvcHelpers
-
-```
 
 ##How to?
 
