@@ -115,8 +115,8 @@ __View?__
 ```
 __Observe Here!!!__
 ```Csharp
- @Html.RadioButtonListFor(model => model.SelectId, ViewData["Status"] as RadioButtonList, null, "<div class=\"checkbox\">")
-                    @Html.ValidationMessageFor(model => model.SelectId, "", new { @class = "text-danger" })
+@Html.RadioButtonListFor(model => model.SelectId, ViewData["Status"] as RadioButtonList, null, "<div class=\"checkbox\">")
+@Html.ValidationMessageFor(model => model.SelectId, "", new { @class = "text-danger" })
 ```
 ###Or
 
