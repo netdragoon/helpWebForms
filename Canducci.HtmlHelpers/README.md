@@ -28,13 +28,10 @@ PM> Install-Package CanducciHtmlMvcHelpers
     @Html.ButtonSubmit("Danger", ButtonBootstrapStyle.Danger, Glyphicon.Ok)
     @Html.ButtonSubmit("Link", ButtonBootstrapStyle.Link, Glyphicon.Ok)
 
-[![NuGet](https://github.com/netdragoon/helpWebForms/blob/master/Canducci.HtmlHelpers/button.png)(https://www.nuget.org/packages/CanducciHtmlMvcHelpers/)
+[![NuGet](https://github.com/netdragoon/helpWebForms/blob/master/Canducci.HtmlHelpers/button.png)](https://www.nuget.org/packages/CanducciHtmlMvcHelpers/)
 
 
 ###RadioButtonList
-
-
-
 
 ##How to?
 
