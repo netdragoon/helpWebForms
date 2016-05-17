@@ -69,8 +69,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Canducci.HtmlHelpers\ButtonStyle.cs">
-      <Link>ButtonStyle.cs</Link>
+    <Compile Include="..\Canducci.HtmlHelpers\ButtonBootstrapStyle.cs">
+      <Link>ButtonBootstrapStyle.cs</Link>
     </Compile>
     <Compile Include="..\Canducci.HtmlHelpers\Glyphicon.cs">
       <Link>Glyphicon.cs</Link>

@@ -4,4 +4,27 @@
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
 
-<p>Use this area to provide additional information.</p>
+
+<div>
+    @Html.ButtonSubmit("Normal")
+</div>
+<br />
+<div>
+    @Html.ButtonSubmit("Default", ButtonBootstrapStyle.Default)
+    @Html.ButtonSubmit("Primary", ButtonBootstrapStyle.Primary)
+    @Html.ButtonSubmit("Success", ButtonBootstrapStyle.Success)
+    @Html.ButtonSubmit("Info", ButtonBootstrapStyle.Info)
+    @Html.ButtonSubmit("Warning", ButtonBootstrapStyle.Warning)
+    @Html.ButtonSubmit("Danger", ButtonBootstrapStyle.Danger)
+    @Html.ButtonSubmit("Link", ButtonBootstrapStyle.Link)
+</div>
+<br />
+<div>
+    @Html.ButtonSubmit("Default", ButtonBootstrapStyle.Default, Glyphicon.Ok)
+    @Html.ButtonSubmit("Primary", ButtonBootstrapStyle.Primary, Glyphicon.Ok)
+    @Html.ButtonSubmit("Success", ButtonBootstrapStyle.Success, Glyphicon.Pause)
+    @Html.ButtonSubmit("Info", ButtonBootstrapStyle.Info, Glyphicon.Ok)
+    @Html.ButtonSubmit("Warning", ButtonBootstrapStyle.Warning, Glyphicon.Ok)
+    @Html.ButtonSubmit("Danger", ButtonBootstrapStyle.Danger, Glyphicon.Ok)
+    @Html.ButtonSubmit("Link", ButtonBootstrapStyle.Link, Glyphicon.Ok)
+</div>

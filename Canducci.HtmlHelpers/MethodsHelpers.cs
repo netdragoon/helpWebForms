@@ -1,5 +1,7 @@
 ﻿using System.Collections;
+using System.ComponentModel;
 using System.Linq.Expressions;
+using System.Reflection;
 using System.Text;
 using System.Web.Routing;
 
@@ -7,6 +9,8 @@ namespace System.Web.Mvc
 {
     public static class MethodsHelpers
     {
+
+        #region Internal
         internal static object GetValue<TModel, TProperty>(this HtmlHelper<TModel> htmlHelper, Expression<Func<TModel, TProperty>> expression)
             where TModel : class
         {
@@ -72,10 +76,30 @@ namespace System.Web.Mvc
 
             return MvcHtmlString.Empty;
         }
-        internal static string ButtonRender(string label, string css = "")
-        {
-            return string.Format("<button type=\"submit\" class=\"{0}\">{1}</button>", css, label);
+        internal static string ButtonRender(string label, string css = "", string glyphicon = "")
+        {           
+            if (string.IsNullOrEmpty(glyphicon) == false)
+            {
+                glyphicon = string.Format("<span class=\"{0}\"></span> ", glyphicon);           
+            }
+            return string.Format("<button type=\"submit\" class=\"{0}\">{1}{2}</button>", css, glyphicon, label);
         }
+        internal static string GetEnumDescription(Enum en)
+        {
+            Type type = en.GetType();
+            MemberInfo[] memInfo = type.GetMember(en.ToString());
+            if (memInfo != null && memInfo.Length > 0)
+            {
+                object[] attrs = memInfo[0].GetCustomAttributes(typeof(DescriptionAttribute), false);
+                if (attrs != null && attrs.Length > 0)
+                {
+                    return ((DescriptionAttribute)attrs[0]).Description;
+                }
+            }
+            return en.ToString();
+        }
+        #endregion
+
         #region RadioButtonList
         public static MvcHtmlString RadioButtonList(this HtmlHelper htmlHelper, string name, string prefix = "<div>", string sufix = "</div>", object htmlAttributes = null)
         {
@@ -130,12 +154,22 @@ namespace System.Web.Mvc
         #region ButtonSubmit
         public static MvcHtmlString ButtonSubmit(this HtmlHelper htmlHelper, string label)
         {
-            return MvcHtmlString.Create(ButtonRender(label, ""));
+            return MvcHtmlString.Create(ButtonRender(label));
         }
 
-        public static MvcHtmlString ButtonSubmit(this HtmlHelper htmlHelper, string label, ButtonStyle style)
+        public static MvcHtmlString ButtonSubmit(this HtmlHelper htmlHelper, string label, string css)
+        {
+            return MvcHtmlString.Create(ButtonRender(label, css));
+        }
+
+        public static MvcHtmlString ButtonSubmit(this HtmlHelper htmlHelper, string label, ButtonBootstrapStyle style)
         {            
-            return MvcHtmlString.Create(ButtonRender(label, style.ToString()));
+            return MvcHtmlString.Create(ButtonRender(label, GetEnumDescription(style)));
+        }
+
+        public static MvcHtmlString ButtonSubmit(this HtmlHelper htmlHelper, string label, ButtonBootstrapStyle style, string glyphicon)
+        {
+            return MvcHtmlString.Create(ButtonRender(label, GetEnumDescription(style), glyphicon));
         }
 
         #endregion ButtonSubmit
