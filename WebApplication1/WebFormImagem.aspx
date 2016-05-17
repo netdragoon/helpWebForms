@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebFormImagem.aspx.cs" Inherits="WebApplication1.WebFormImagem" %>
+﻿<%@ Page Language="C#" EnableEventValidation="false" AutoEventWireup="true" CodeBehind="WebFormImagem.aspx.cs" Inherits="WebApplication1.WebFormImagem" %>
 
 <!DOCTYPE html>
 

@@ -13,7 +13,9 @@
     @using (Html.BeginForm())
     {
         <div>
+            @Html.Id("Status")            
             @Html.RadioButtonList("Status") 
+
         </div>
         <div>
             <button type="submit">Alterar</button>

@@ -72,11 +72,15 @@ namespace System.Web.Mvc
 
             return MvcHtmlString.Empty;
         }
+        internal static string ButtonRender(string label, string css = "")
+        {
+            return string.Format("<button type=\"submit\" class=\"{0}\">{1}</button>", css, label);
+        }
+        #region RadioButtonList
         public static MvcHtmlString RadioButtonList(this HtmlHelper htmlHelper, string name, string prefix = "<div>", string sufix = "</div>", object htmlAttributes = null)
         {
             return Render(htmlHelper, name, prefix, sufix, htmlAttributes);
         }
-
         public static MvcHtmlString RadioButtonListFor<TModel, TProperty>(this HtmlHelper<TModel> htmlHelper, Expression<Func<TModel, TProperty>> expression, IEnumerable items, string dataValue, string dataName = null, object htmlAttributes = null, string prefix = "<div>", string sufix = "</div>")
             where TModel: class, new()
         {            
@@ -101,7 +105,6 @@ namespace System.Web.Mvc
 
             return Render(htmlHelper, _metadata.PropertyName, prefix, sufix, htmlAttributes);
         }
-
         public static MvcHtmlString RadioButtonListFor<TModel, TProperty>(this HtmlHelper<TModel> htmlHelper, Expression<Func<TModel, TProperty>> expression, RadioButtonList config, object htmlAttributes = null, string prefix = "<div>", string sufix = "</div>")
             where TModel : class, new()
         {
@@ -122,5 +125,19 @@ namespace System.Web.Mvc
 
             return Render(htmlHelper, _metadata.PropertyName, prefix, sufix, htmlAttributes);
         }
+        #endregion RadioButtonList
+
+        #region ButtonSubmit
+        public static MvcHtmlString ButtonSubmit(this HtmlHelper htmlHelper, string label)
+        {
+            return MvcHtmlString.Create(ButtonRender(label, ""));
+        }
+
+        public static MvcHtmlString ButtonSubmit(this HtmlHelper htmlHelper, string label, ButtonStyle style)
+        {            
+            return MvcHtmlString.Create(ButtonRender(label, style.ToString()));
+        }
+
+        #endregion ButtonSubmit
     }
 }

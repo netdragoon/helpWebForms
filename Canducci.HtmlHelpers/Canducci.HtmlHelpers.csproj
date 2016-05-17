@@ -71,6 +71,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ButtonStyle.cs" />
+    <Compile Include="Glyphicon.cs" />
     <Compile Include="MethodsHelpers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RadioButtonList.cs" />

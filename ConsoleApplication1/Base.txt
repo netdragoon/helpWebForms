@@ -1,0 +1,3 @@
+﻿MARIA     15    CASA
+PEDRO     25    PREDIO
+JOSE      10    LAJE

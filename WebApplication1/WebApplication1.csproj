@@ -146,6 +146,7 @@
       <LastGenOutput>Database.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="WebForm1.aspx" />
     <Content Include="WebFormImagem.aspx" />
     <Content Include="GenericHandlerLoadImagem.ashx" />
     <Content Include="WebFormLoadImagem.aspx" />
@@ -260,6 +261,13 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebFormImagem.aspx.cs">
       <DependentUpon>WebFormImagem.aspx</DependentUpon>
