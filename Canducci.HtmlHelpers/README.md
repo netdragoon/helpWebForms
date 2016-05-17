@@ -10,6 +10,7 @@ PM> Install-Package CanducciHtmlMvcHelpers
 
 ###Button Simply or Bootstrap Style
 
+___How to?___
     @Html.ButtonSubmit("Normal")
 
     @Html.ButtonSubmit("Default", ButtonBootstrapStyle.Default)
@@ -33,7 +34,7 @@ PM> Install-Package CanducciHtmlMvcHelpers
 
 ###RadioButtonList
 
-##How to?
+___How to?___
 
 __Code__
 ```Csharp
