@@ -10,6 +10,8 @@ PM> Install-Package CanducciHtmlMvcHelpers
 
 ###Button Simply or Bootstrap Style
 
+___How to?___
+
     @Html.ButtonSubmit("Normal")
 
     @Html.ButtonSubmit("Default", ButtonBootstrapStyle.Default)
@@ -28,13 +30,12 @@ PM> Install-Package CanducciHtmlMvcHelpers
     @Html.ButtonSubmit("Danger", ButtonBootstrapStyle.Danger, Glyphicon.Ok)
     @Html.ButtonSubmit("Link", ButtonBootstrapStyle.Link, Glyphicon.Ok)
 
+[![NuGet](https://github.com/netdragoon/helpWebForms/blob/master/Canducci.HtmlHelpers/button.png)](https://www.nuget.org/packages/CanducciHtmlMvcHelpers/)
+
 
 ###RadioButtonList
 
-
-
-
-##How to?
+___How to?___
 
 __Code__
 ```Csharp
@@ -114,8 +115,8 @@ __View?__
 ```
 __Observe Here!!!__
 ```Csharp
- @Html.RadioButtonListFor(model => model.SelectId, ViewData["Status"] as RadioButtonList, null, "<div class=\"checkbox\">")
-                    @Html.ValidationMessageFor(model => model.SelectId, "", new { @class = "text-danger" })
+@Html.RadioButtonListFor(model => model.SelectId, ViewData["Status"] as RadioButtonList, null, "<div class=\"checkbox\">")
+@Html.ValidationMessageFor(model => model.SelectId, "", new { @class = "text-danger" })
 ```
 ###Or
 
