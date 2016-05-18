@@ -76,13 +76,11 @@ namespace System.Web.Mvc
 
             return MvcHtmlString.Empty;
         }
-        internal static string ButtonRender(string label, string css = "", string glyphicon = "")
+        internal static string ButtonRender(string label, string css = "", string glyphicon = "", string size = "", bool disabled = false)
         {           
-            if (string.IsNullOrEmpty(glyphicon) == false)
-            {
-                glyphicon = string.Format("<span class=\"{0}\"></span> ", glyphicon);           
-            }
-            return string.Format("<button type=\"submit\" class=\"{0}\">{1}{2}</button>", css, glyphicon, label);
+            if (string.IsNullOrEmpty(glyphicon) == false) glyphicon = string.Format("<span class=\"{0}\"></span> ", glyphicon);
+            if (string.IsNullOrEmpty(size) == false) css += " " + size;            
+            return string.Format("<button type=\"submit\" class=\"{0}\"{3}>{1}{2}</button>", css, glyphicon, label, (disabled ? " disabled=\"disabled\"" : ""));
         }
         internal static string GetEnumDescription(Enum en)
         {
@@ -152,24 +150,29 @@ namespace System.Web.Mvc
         #endregion RadioButtonList
 
         #region ButtonSubmit
-        public static MvcHtmlString ButtonSubmit(this HtmlHelper htmlHelper, string label)
+        public static MvcHtmlString ButtonSubmit(this HtmlHelper htmlHelper, string label, bool disabled = false)
         {
-            return MvcHtmlString.Create(ButtonRender(label));
+            return MvcHtmlString.Create(ButtonRender(label, "", "", "", disabled));
         }
 
-        public static MvcHtmlString ButtonSubmit(this HtmlHelper htmlHelper, string label, string css)
+        public static MvcHtmlString ButtonSubmit(this HtmlHelper htmlHelper, string label, string css, bool disabled = false)
         {
-            return MvcHtmlString.Create(ButtonRender(label, css));
+            return MvcHtmlString.Create(ButtonRender(label, css, "", "", disabled));
         }
 
-        public static MvcHtmlString ButtonSubmit(this HtmlHelper htmlHelper, string label, ButtonBootstrapStyle style)
-        {            
-            return MvcHtmlString.Create(ButtonRender(label, GetEnumDescription(style)));
+        public static MvcHtmlString ButtonSubmit(this HtmlHelper htmlHelper, string label, ButtonBootstrapStyle style, bool disabled = false)
+        {
+            return MvcHtmlString.Create(ButtonRender(label, GetEnumDescription(style), "", "", disabled));
         }
 
-        public static MvcHtmlString ButtonSubmit(this HtmlHelper htmlHelper, string label, ButtonBootstrapStyle style, string glyphicon)
+        public static MvcHtmlString ButtonSubmit(this HtmlHelper htmlHelper, string label, ButtonBootstrapStyle style, Glyphicon glyphicon, bool disabled = false)
         {
-            return MvcHtmlString.Create(ButtonRender(label, GetEnumDescription(style), glyphicon));
+            return MvcHtmlString.Create(ButtonRender(label, GetEnumDescription(style), GetEnumDescription(glyphicon), "", disabled));
+        }
+
+        public static MvcHtmlString ButtonSubmit(this HtmlHelper htmlHelper, string label, ButtonBootstrapStyle style, Glyphicon glyphicon, ButtonSize size, bool disabled = false)
+        {
+            return MvcHtmlString.Create(ButtonRender(label, GetEnumDescription(style), GetEnumDescription(glyphicon), GetEnumDescription(size), disabled));
         }
 
         #endregion ButtonSubmit

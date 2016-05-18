@@ -1,146 +1,288 @@
-﻿namespace System.Web.Mvc
+﻿using System.ComponentModel;
+
+namespace System.Web.Mvc
 {
-    public abstract class Glyphicon
+    public enum Glyphicon
     {
-        public const string None = "";
-        public const string Music = "glyphicon glyphicon-music";
-        public const string Search = "glyphicon glyphicon-search";
-        public const string Envelope = "glyphicon glyphicon-envelope";
-        public const string Heart = "glyphicon glyphicon-heart";
-        public const string Star = "glyphicon glyphicon-star";
-        public const string StarEmpty = "glyphicon glyphicon-star-empty";
-        public const string User = "glyphicon glyphicon-user";
-        public const string Film = "glyphicon glyphicon-film";
-        public const string ThLarge = "glyphicon glyphicon-th-large";
-        public const string Th = "glyphicon glyphicon-th";
-        public const string ThList = "glyphicon glyphicon-th-list";
-        public const string Ok = "glyphicon glyphicon-ok";
-        public const string Remove = "glyphicon glyphicon-remove";
-        public const string ZoomIn = "glyphicon glyphicon-zoom-in";
-        public const string ZoomOut = "glyphicon glyphicon-zoom-out";
-        public const string Off = "glyphicon glyphicon-off";
-        public const string Signal = "glyphicon glyphicon-signal";
-        public const string Cog = "glyphicon glyphicon-cog";
-        public const string Trash = "glyphicon glyphicon-trash";
-        public const string Home = "glyphicon glyphicon-home";
-        public const string File = "glyphicon glyphicon-file";
-        public const string Time = "glyphicon glyphicon-time";
-        public const string Road = "glyphicon glyphicon-road";
-        public const string DownloadAlt = "glyphicon glyphicon-download-alt";
-        public const string Download = "glyphicon glyphicon-download";
-        public const string Upload = "glyphicon glyphicon-upload";
-        public const string Inbox = "glyphicon glyphicon-inbox";
-        public const string PlayCircle = "glyphicon glyphicon-play-circle";
-        public const string Repeat = "glyphicon glyphicon-repeat";
-        public const string Refresh = "glyphicon glyphicon-refresh";
-        public const string ListAlt = "glyphicon glyphicon-list-alt";
-        public const string Lock = "glyphicon glyphicon-lock";
-        public const string Flag = "glyphicon glyphicon-flag";
-        public const string Headphones = "glyphicon glyphicon-headphones";
-        public const string VolumeOff = "glyphicon glyphicon-volume-off";
-        public const string VolumeDown = "glyphicon glyphicon-volume-down";
-        public const string VolumeUp = "glyphicon glyphicon-volume-up";
-        public const string Qrcode = "glyphicon glyphicon-qrcode";
-        public const string Barcode = "glyphicon glyphicon-barcode";
-        public const string Tag = "glyphicon glyphicon-tag";
-        public const string Tags = "glyphicon glyphicon-tags";
-        public const string Book = "glyphicon glyphicon-book";
-        public const string Bookmark = "glyphicon glyphicon-bookmark";
-        public const string Print = "glyphicon glyphicon-print";
-        public const string Camera = "glyphicon glyphicon-camera";
-        public const string Font = "glyphicon glyphicon-font";
-        public const string Bold = "glyphicon glyphicon-bold";
-        public const string Italic = "glyphicon glyphicon-italic";
-        public const string TextHeight = "glyphicon glyphicon-text-height";
-        public const string TextWidth = "glyphicon glyphicon-text-width";
-        public const string AlignLeft = "glyphicon glyphicon-align-left";
-        public const string AlignCenter = "glyphicon glyphicon-align-center";
-        public const string AlignRight = "glyphicon glyphicon-align-right";
-        public const string AlignJustify = "glyphicon glyphicon-align-justify";
-        public const string List = "glyphicon glyphicon-list";
-        public const string IndentLeft = "glyphicon glyphicon-indent-left";
-        public const string IndentRight = "glyphicon glyphicon-indent-right";
-        public const string FacetimeVideo = "glyphicon glyphicon-facetime-video";
-        public const string Picture = "glyphicon glyphicon-picture";
-        public const string Pencil = "glyphicon glyphicon-pencil";
-        public const string MapMarker = "glyphicon glyphicon-map-marker";
-        public const string Adjust = "glyphicon glyphicon-adjust";
-        public const string Tint = "glyphicon glyphicon-tint";
-        public const string Edit = "glyphicon glyphicon-edit";
-        public const string Share = "glyphicon glyphicon-share";
-        public const string Check = "glyphicon glyphicon-check";
-        public const string Move = "glyphicon glyphicon-move";
-        public const string StepBackward = "glyphicon glyphicon-step-backward";
-        public const string FastBackward = "glyphicon glyphicon-fast-backward";
-        public const string Backward = "glyphicon glyphicon-backward";
-        public const string Play = "glyphicon glyphicon-play";
-        public const string Pause = "glyphicon glyphicon-pause";
-        public const string Stop = "glyphicon glyphicon-stop";
-        public const string Forward = "glyphicon glyphicon-forward";
-        public const string FastForward = "glyphicon glyphicon-fast-forward";
-        public const string StepForward = "glyphicon glyphicon-step-forward";
-        public const string Eject = "glyphicon-eject";
-        public const string ChevronLeft = "glyphicon glyphicon-chevron-left";
-        public const string ChevronRight = "glyphicon glyphicon-chevron-right";
-        public const string PlusSign = "glyphicon glyphicon-plus-sign";
-        public const string MinusSign = "glyphicon glyphicon-minus-sign";
-        public const string RemoveSign = "glyphicon glyphicon-remove-sign";
-        public const string OkSign = "glyphicon glyphicon-ok-sign";
-        public const string QuestionSign = "glyphicon glyphicon-question-sign";
-        public const string InfoSign = "glyphicon glyphicon-info-sign";
-        public const string Screenshot = "glyphicon glyphicon-screenshot";
-        public const string RemoveCircle = "glyphicon glyphicon-remove-circle";
-        public const string OkCircle = "glyphicon glyphicon-ok-circle";
-        public const string BanCircle = "glyphicon glyphicon-ban-circle";
-        public const string ArrowLeft = "glyphicon glyphicon-arrow-left";
-        public const string ArrowRight = "glyphicon glyphicon-arrow-right";
-        public const string ArrowUp = "glyphicon glyphicon-arrow-up";
-        public const string ArrowDown = "glyphicon glyphicon-arrow-down";
-        public const string ShareAlt = "glyphicon glyphicon-share-alt";
-        public const string ResizeFull = "glyphicon glyphicon-resize-full";
-        public const string ResizeSmall = "glyphicon glyphicon-resize-small";
-        public const string Plus = "glyphicon glyphicon-plus";
-        public const string Minus = "glyphicon glyphicon-minus";
-        public const string Asterisk = "glyphicon glyphicon-asterisk";
-        public const string ExclamationSign = "glyphicon glyphicon-exclamation-sign";
-        public const string Gift = "glyphicon glyphicon-gift";
-        public const string Leaf = "glyphicon glyphicon-leaf";
-        public const string Fire = "glyphicon glyphicon-fire";
-        public const string EyeOpen = "glyphicon glyphicon-eye-open";
-        public const string EyeClose = "glyphicon glyphicon-eye-close";
-        public const string WarningSign = "glyphicon glyphicon-warning-sign";
-        public const string Plane = "glyphicon glyphicon-plane";
-        public const string Calendar = "glyphicon glyphicon-calendar";
-        public const string Random = "glyphicon glyphicon-random";
-        public const string Comment = "glyphicon glyphicon-comment";
-        public const string Magnet = "glyphicon glyphicon-magnet";
-        public const string ChevronUp = "glyphicon glyphicon-chevron-up";
-        public const string ChevronDown = "glyphicon glyphicon-chevron-down";
-        public const string Retweet = "glyphicon glyphicon-retweet";
-        public const string ShoppingCart = "glyphicon glyphicon-shopping-cart";
-        public const string FolderClose = "glyphicon glyphicon-folder-close";
-        public const string FolderOpen = "glyphicon glyphicon-folder-open";
-        public const string ResizeVertical = "glyphicon glyphicon-resize-vertical";
-        public const string ResizeHorizontal = "glyphicon glyphicon-resize-horizontal";
-        public const string Hdd = "glyphicon glyphicon-hdd";
-        public const string Bullhorn = "glyphicon glyphicon-bullhorn";
-        public const string Bell = "glyphicon glyphicon-bell";
-        public const string Certificate = "glyphicon glyphicon-certificate";
-        public const string ThumbsUp = "glyphicon glyphicon-thumbs-up";
-        public const string ThumbsDown = "glyphicon glyphicon-thumbs-down";
-        public const string HandRight = "glyphicon glyphicon-hand-right";
-        public const string HandLeft = "glyphicon glyphicon-hand-left";
-        public const string HandUp = "glyphicon glyphicon-hand-up";
-        public const string HandDown = "glyphicon glyphicon-hand-down";
-        public const string CircleArrowRight = "glyphicon glyphicon-circle-arrow-right";
-        public const string CircleArrowLeft = "glyphicon glyphicon-circle-arrow-left";
-        public const string CircleArrowUp = "glyphicon glyphicon-circle-arrow-up";
-        public const string CircleArrowDown = "glyphicon glyphicon-circle-arrow-down";
-        public const string Globe = "glyphicon glyphicon-globe";
-        public const string Wrench = "glyphicon glyphicon-wrench";
-        public const string Tasks = "glyphicon glyphicon-tasks";
-        public const string Filter = "glyphicon glyphicon-filter";
-        public const string Briefcase = "glyphicon glyphicon-briefcase";
-        public const string Fullscreen = "glyphicon glyphicon-fullscreen";
+        [Description("")]
+        None,
+        [Description("glyphicon glyphicon-music")]
+        Music,
+        [Description("glyphicon glyphicon-search")]
+        Search,
+        [Description("glyphicon glyphicon-envelope")]
+        Envelope,
+        [Description("glyphicon glyphicon-heart")]
+        Heart,
+        [Description("glyphicon glyphicon-star")]
+        Star,
+        [Description("glyphicon glyphicon-star-empty")]
+        StarEmpty,
+        [Description("glyphicon glyphicon-user")]
+        User,
+        [Description("glyphicon glyphicon-film")]
+        Film,
+        [Description("glyphicon glyphicon-th-large")]
+        ThLarge,
+        [Description("glyphicon glyphicon-th")]
+        Th,
+        [Description("glyphicon glyphicon-th-list")]
+        ThList,
+        [Description("glyphicon glyphicon-ok")]
+        Ok,
+        [Description("glyphicon glyphicon-remove")]
+        Remove,
+        [Description("glyphicon glyphicon-zoom-in")]
+        ZoomIn,
+        [Description("glyphicon glyphicon-zoom-out")]
+        ZoomOut,
+        [Description("glyphicon glyphicon-off")]
+        Off,
+        [Description("glyphicon glyphicon-signal")]
+        Signal,
+        [Description("glyphicon glyphicon-cog")]
+        Cog,
+        [Description("glyphicon glyphicon-trash")]
+        Trash,
+        [Description("glyphicon glyphicon-home")]
+        Home,
+        [Description("glyphicon glyphicon-file")]
+        File,
+        [Description("glyphicon glyphicon-time")]
+        Time,
+        [Description("glyphicon glyphicon-road")]
+        Road,
+        [Description("glyphicon glyphicon-download-alt")]
+        DownloadAlt,
+        [Description("glyphicon glyphicon-download")]
+        Download,
+        [Description("glyphicon glyphicon-upload")]
+        Upload,
+        [Description("glyphicon glyphicon-inbox")]
+        Inbox,
+        [Description("glyphicon glyphicon-play-circle")]
+        PlayCircle,
+        [Description("glyphicon glyphicon-repeat")]
+        Repeat,
+        [Description("glyphicon glyphicon-refresh")]
+        Refresh,
+        [Description("glyphicon glyphicon-list-alt")]
+        ListAlt,
+        [Description("glyphicon glyphicon-lock")]
+        Lock,
+        [Description("glyphicon glyphicon-flag")]
+        Flag,
+        [Description("glyphicon glyphicon-headphones")]
+        Headphones,
+        [Description("glyphicon glyphicon-volume-off")]
+        VolumeOff,
+        [Description("glyphicon glyphicon-volume-down")]
+        VolumeDown,
+        [Description("glyphicon glyphicon-volume-up")]
+        VolumeUp,
+        [Description("glyphicon glyphicon-qrcode")]
+        Qrcode,
+        [Description("glyphicon glyphicon-barcode")]
+        Barcode,
+        [Description("glyphicon glyphicon-tag")]
+        Tag,
+        [Description("glyphicon glyphicon-tags")]
+        Tags,
+        [Description("glyphicon glyphicon-book")]
+        Book,
+        [Description("glyphicon glyphicon-bookmark")]
+        Bookmark,
+        [Description("glyphicon glyphicon-print")]
+        Print,
+        [Description("glyphicon glyphicon-camera")]
+        Camera,
+        [Description("glyphicon glyphicon-font")]
+        Font,
+        [Description("glyphicon glyphicon-bold")]
+        Bold,
+        [Description("glyphicon glyphicon-italic")]
+        Italic,
+        [Description("glyphicon glyphicon-text-height")]
+        TextHeight,
+        [Description("glyphicon glyphicon-text-width")]
+        TextWidth,
+        [Description("glyphicon glyphicon-align-left")]
+        AlignLeft,
+        [Description("glyphicon glyphicon-align-center")]
+        AlignCenter,
+        [Description("glyphicon glyphicon-align-right")]
+        AlignRight,
+        [Description("glyphicon glyphicon-align-justify")]
+        AlignJustify,
+        [Description("glyphicon glyphicon-list")]
+        List,
+        [Description("glyphicon glyphicon-indent-left")]
+        IndentLeft,
+        [Description("glyphicon glyphicon-indent-right")]
+        IndentRight,
+        [Description("glyphicon glyphicon-facetime-video")]
+        FacetimeVideo,
+        [Description("glyphicon glyphicon-picture")]
+        Picture,
+        [Description("glyphicon glyphicon-pencil")]
+        Pencil,
+        [Description("glyphicon glyphicon-map-marker")]
+        MapMarker,
+        [Description("glyphicon glyphicon-adjust")]
+        Adjust,
+        [Description("glyphicon glyphicon-tint")]
+        Tint,
+        [Description("glyphicon glyphicon-edit")]
+        Edit,
+        [Description("glyphicon glyphicon-share")]
+        Share,
+        [Description("glyphicon glyphicon-check")]
+        Check,
+        [Description("glyphicon glyphicon-move")]
+        Move,
+        [Description("glyphicon glyphicon-step-backward")]
+        StepBackward,
+        [Description("glyphicon glyphicon-fast-backward")]
+        FastBackward,
+        [Description("glyphicon glyphicon-backward")]
+        Backward,
+        [Description("glyphicon glyphicon-play")]
+        Play,
+        [Description("glyphicon glyphicon-pause")]
+        Pause,
+        [Description("glyphicon glyphicon-stop")]
+        Stop,
+        [Description("glyphicon glyphicon-forward")]
+        Forward,
+        [Description("glyphicon glyphicon-fast-forward")]
+        FastForward,
+        [Description("glyphicon glyphicon-step-forward")]
+        StepForward,
+        [Description("glyphicon-eject")]
+        Eject,
+        [Description("glyphicon glyphicon-chevron-left")]
+        ChevronLeft,
+        [Description("glyphicon glyphicon-chevron-right")]
+        ChevronRight,
+        [Description("glyphicon glyphicon-plus-sign")]
+        PlusSign,
+        [Description("glyphicon glyphicon-minus-sign")]
+        MinusSign,
+        [Description("glyphicon glyphicon-remove-sign")]
+        RemoveSign,
+        [Description("glyphicon glyphicon-ok-sign")]
+        OkSign,
+        [Description("glyphicon glyphicon-question-sign")]
+        QuestionSign,
+        [Description("glyphicon glyphicon-info-sign")]
+        InfoSign,
+        [Description("glyphicon glyphicon-screenshot")]
+        Screenshot,
+        [Description("glyphicon glyphicon-remove-circle")]
+        RemoveCircle,
+        [Description("glyphicon glyphicon-ok-circle")]
+        OkCircle,
+        [Description("glyphicon glyphicon-ban-circle")]
+        BanCircle,
+        [Description("glyphicon glyphicon-arrow-left")]
+        ArrowLeft,
+        [Description("glyphicon glyphicon-arrow-right")]
+        ArrowRight,
+        [Description("glyphicon glyphicon-arrow-up")]
+        ArrowUp,
+        [Description("glyphicon glyphicon-arrow-down")]
+        ArrowDown,
+        [Description("glyphicon glyphicon-share-alt")]
+        ShareAlt,
+        [Description("glyphicon glyphicon-resize-full")]
+        ResizeFull,
+        [Description("glyphicon glyphicon-resize-small")]
+        ResizeSmall,
+        [Description("glyphicon glyphicon-plus")]
+        Plus,
+        [Description("glyphicon glyphicon-minus")]
+        Minus,
+        [Description("glyphicon glyphicon-asterisk")]
+        Asterisk,
+        [Description("glyphicon glyphicon-exclamation-sign")]
+        ExclamationSign,
+        [Description("glyphicon glyphicon-gift")]
+        Gift,
+        [Description("glyphicon glyphicon-leaf")]
+        Leaf,
+        [Description("glyphicon glyphicon-fire")]
+        Fire,
+        [Description("glyphicon glyphicon-eye-open")]
+        EyeOpen,
+        [Description("glyphicon glyphicon-eye-close")]
+        EyeClose,
+        [Description("glyphicon glyphicon-warning-sign")]
+        WarningSign,
+        [Description("glyphicon glyphicon-plane")]
+        Plane,
+        [Description("glyphicon glyphicon-calendar")]
+        Calendar,
+        [Description("glyphicon glyphicon-random")]
+        Random,
+        [Description("glyphicon glyphicon-comment")]
+        Comment,
+        [Description("glyphicon glyphicon-magnet")]
+        Magnet,
+        [Description("glyphicon glyphicon-chevron-up")]
+        ChevronUp,
+        [Description("glyphicon glyphicon-chevron-down")]
+        ChevronDown,
+        [Description("glyphicon glyphicon-retweet")]
+        Retweet,
+        [Description("glyphicon glyphicon-shopping-cart")]
+        ShoppingCart,
+        [Description("glyphicon glyphicon-folder-close")]
+        FolderClose,
+        [Description("glyphicon glyphicon-folder-open")]
+        FolderOpen,
+        [Description("glyphicon glyphicon-resize-vertical")]
+        ResizeVertical,
+        [Description("glyphicon glyphicon-resize-horizontal")]
+        ResizeHorizontal,
+        [Description("glyphicon glyphicon-hdd")]
+        Hdd,
+        [Description("glyphicon glyphicon-bullhorn")]
+        Bullhorn,
+        [Description("glyphicon glyphicon-bell")]
+        Bell,
+        [Description("glyphicon glyphicon-certificate")]
+        Certificate,
+        [Description("glyphicon glyphicon-thumbs-up")]
+        ThumbsUp,
+        [Description("glyphicon glyphicon-thumbs-down")]
+        ThumbsDown,
+        [Description("glyphicon glyphicon-hand-right")]
+        HandRight,
+        [Description("glyphicon glyphicon-hand-left")]
+        HandLeft,
+        [Description("glyphicon glyphicon-hand-up")]
+        HandUp,
+        [Description("glyphicon glyphicon-hand-down")]
+        HandDown,
+        [Description("glyphicon glyphicon-circle-arrow-right")]
+        CircleArrowRight,
+        [Description("glyphicon glyphicon-circle-arrow-left")]
+        CircleArrowLeft,
+        [Description("glyphicon glyphicon-circle-arrow-up")]
+        CircleArrowUp,
+        [Description("glyphicon glyphicon-circle-arrow-down")]
+        CircleArrowDown,
+        [Description("glyphicon glyphicon-globe")]
+        Globe,
+        [Description("glyphicon glyphicon-wrench")]
+        Wrench,
+        [Description("glyphicon glyphicon-tasks")]
+        Tasks,
+        [Description("glyphicon glyphicon-filter")]
+        Filter,
+        [Description("glyphicon glyphicon-briefcase")]
+        Briefcase,
+        [Description("glyphicon glyphicon-fullscreen")]
+        Fullscreen,
     }
 }

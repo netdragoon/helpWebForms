@@ -72,6 +72,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ButtonBootstrapStyle.cs" />
+    <Compile Include="ButtonSize.cs" />
     <Compile Include="Glyphicon.cs" />
     <Compile Include="MethodsHelpers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

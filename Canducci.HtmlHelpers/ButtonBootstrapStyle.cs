@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel;
-
 namespace System.Web.Mvc
 {
     public enum ButtonBootstrapStyle
