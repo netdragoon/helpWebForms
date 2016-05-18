@@ -12,8 +12,10 @@ PM> Install-Package CanducciHtmlMvcHelpers
 
 ___How to?___
 
+    //Button Default
     @Html.ButtonSubmit("Normal")
 
+    //Button + Style
     @Html.ButtonSubmit("Default", ButtonBootstrapStyle.Default)
     @Html.ButtonSubmit("Primary", ButtonBootstrapStyle.Primary)
     @Html.ButtonSubmit("Success", ButtonBootstrapStyle.Success)
@@ -22,6 +24,7 @@ ___How to?___
     @Html.ButtonSubmit("Danger", ButtonBootstrapStyle.Danger)
     @Html.ButtonSubmit("Link", ButtonBootstrapStyle.Link)
 
+    //Button + Style + Glyphicon
     @Html.ButtonSubmit("Default", ButtonBootstrapStyle.Default, Glyphicon.Ok)
     @Html.ButtonSubmit("Primary", ButtonBootstrapStyle.Primary, Glyphicon.Ok)
     @Html.ButtonSubmit("Success", ButtonBootstrapStyle.Success, Glyphicon.Pause)
@@ -29,6 +32,22 @@ ___How to?___
     @Html.ButtonSubmit("Warning", ButtonBootstrapStyle.Warning, Glyphicon.Ok)
     @Html.ButtonSubmit("Danger", ButtonBootstrapStyle.Danger, Glyphicon.Ok)
     @Html.ButtonSubmit("Link", ButtonBootstrapStyle.Link, Glyphicon.Ok)
+
+    //Button + Style + Glyphicon + Size
+    @Html.ButtonSubmit("Default", ButtonBootstrapStyle.Default, Glyphicon.Adjust, ButtonSize.Default)
+    @Html.ButtonSubmit("Primary", ButtonBootstrapStyle.Primary, Glyphicon.Ok, ButtonSize.DefaultAndBlock)
+    @Html.ButtonSubmit("Success", ButtonBootstrapStyle.Success, Glyphicon.Pause, ButtonSize.ExtraSmall)
+    @Html.ButtonSubmit("Info", ButtonBootstrapStyle.Info, Glyphicon.Ok, ButtonSize.ExtraSmallAndBlock)
+    @Html.ButtonSubmit("Warning", ButtonBootstrapStyle.Warning, Glyphicon.Ok, ButtonSize.Large)
+    @Html.ButtonSubmit("Danger", ButtonBootstrapStyle.Danger, Glyphicon.Ok, ButtonSize.LargeAndBlock)
+    @Html.ButtonSubmit("Link", ButtonBootstrapStyle.Link, Glyphicon.Ok, ButtonSize.Small)
+    @Html.ButtonSubmit("Link", ButtonBootstrapStyle.Link, Glyphicon.Ok, ButtonSize.SmallAndBlock)
+
+    //Button Disabled
+    @Html.ButtonSubmit("Default", true)
+    
+    //Button + Style + Glyphicon + Size + Disabled
+    @Html.ButtonSubmit("Primary", ButtonBootstrapStyle.Primary, Glyphicon.Ok, ButtonSize.DefaultAndBlock, true)
 
 [![NuGet](https://github.com/netdragoon/helpWebForms/blob/master/Canducci.HtmlHelpers/button.png)](https://www.nuget.org/packages/CanducciHtmlMvcHelpers/)
 
