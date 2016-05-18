@@ -4,46 +4,47 @@
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
 
+<form action="" method="post">
+    <div>
+        @Html.ButtonSubmit("Normal")
+    </div>
+    <br />
+    <hr />
+    <div>
+        @Html.ButtonSubmit("Default", ButtonBootstrapStyle.Default)
+        @Html.ButtonSubmit("Primary", ButtonBootstrapStyle.Primary)
+        @Html.ButtonSubmit("Success", ButtonBootstrapStyle.Success)
+        @Html.ButtonSubmit("Info", ButtonBootstrapStyle.Info)
+        @Html.ButtonSubmit("Warning", ButtonBootstrapStyle.Warning)
+        @Html.ButtonSubmit("Danger", ButtonBootstrapStyle.Danger)
+        @Html.ButtonSubmit("Link", ButtonBootstrapStyle.Link)
+    </div>
+    <br />
+    <hr />
+    <div>
+        @Html.ButtonSubmit("Default", ButtonBootstrapStyle.Default, Glyphicon.Adjust)
+        @Html.ButtonSubmit("Primary", ButtonBootstrapStyle.Primary, Glyphicon.Ok)
+        @Html.ButtonSubmit("Success", ButtonBootstrapStyle.Success, Glyphicon.Pause)
+        @Html.ButtonSubmit("Info", ButtonBootstrapStyle.Info, Glyphicon.Ok)
+        @Html.ButtonSubmit("Warning", ButtonBootstrapStyle.Warning, Glyphicon.Ok)
+        @Html.ButtonSubmit("Danger", ButtonBootstrapStyle.Danger, Glyphicon.Ok)
+        @Html.ButtonSubmit("Link", ButtonBootstrapStyle.Link, Glyphicon.Ok)
+    </div>
+    <br />
+    <hr />
+    <div>
+        @Html.ButtonSubmit("Default", ButtonBootstrapStyle.Default, Glyphicon.Adjust, ButtonSize.Default)
+        @Html.ButtonSubmit("Primary", ButtonBootstrapStyle.Primary, Glyphicon.Ok, ButtonSize.DefaultAndBlock)
+        @Html.ButtonSubmit("Success", ButtonBootstrapStyle.Success, Glyphicon.Pause, ButtonSize.ExtraSmall)
+        @Html.ButtonSubmit("Info", ButtonBootstrapStyle.Info, Glyphicon.Ok, ButtonSize.ExtraSmallAndBlock)
+        @Html.ButtonSubmit("Warning", ButtonBootstrapStyle.Warning, Glyphicon.Ok, ButtonSize.Large)
+        @Html.ButtonSubmit("Danger", ButtonBootstrapStyle.Danger, Glyphicon.Ok, ButtonSize.LargeAndBlock)
+        @Html.ButtonSubmit("Link", ButtonBootstrapStyle.Link, Glyphicon.Ok, ButtonSize.Small)
+        @Html.ButtonSubmit("Link", ButtonBootstrapStyle.Link, Glyphicon.Ok, ButtonSize.SmallAndBlock)
+    </div>
 
-<div>
-    @Html.ButtonSubmit("Normal")
-</div>
-<br />
-<hr />
-<div>
-    @Html.ButtonSubmit("Default", ButtonBootstrapStyle.Default)
-    @Html.ButtonSubmit("Primary", ButtonBootstrapStyle.Primary)
-    @Html.ButtonSubmit("Success", ButtonBootstrapStyle.Success)
-    @Html.ButtonSubmit("Info", ButtonBootstrapStyle.Info)
-    @Html.ButtonSubmit("Warning", ButtonBootstrapStyle.Warning)
-    @Html.ButtonSubmit("Danger", ButtonBootstrapStyle.Danger)
-    @Html.ButtonSubmit("Link", ButtonBootstrapStyle.Link)
-</div>
-<br />
-<hr />
-<div>
-    @Html.ButtonSubmit("Default", ButtonBootstrapStyle.Default, Glyphicon.Adjust)
-    @Html.ButtonSubmit("Primary", ButtonBootstrapStyle.Primary, Glyphicon.Ok)
-    @Html.ButtonSubmit("Success", ButtonBootstrapStyle.Success, Glyphicon.Pause)
-    @Html.ButtonSubmit("Info", ButtonBootstrapStyle.Info, Glyphicon.Ok)
-    @Html.ButtonSubmit("Warning", ButtonBootstrapStyle.Warning, Glyphicon.Ok)
-    @Html.ButtonSubmit("Danger", ButtonBootstrapStyle.Danger, Glyphicon.Ok)
-    @Html.ButtonSubmit("Link", ButtonBootstrapStyle.Link, Glyphicon.Ok)
-</div>
-<br />
-<hr />
-<div>
-    @Html.ButtonSubmit("Default", ButtonBootstrapStyle.Default, Glyphicon.Adjust, ButtonSize.Default)
-    @Html.ButtonSubmit("Primary", ButtonBootstrapStyle.Primary, Glyphicon.Ok, ButtonSize.DefaultAndBlock)
-    @Html.ButtonSubmit("Success", ButtonBootstrapStyle.Success, Glyphicon.Pause, ButtonSize.ExtraSmall)
-    @Html.ButtonSubmit("Info", ButtonBootstrapStyle.Info, Glyphicon.Ok, ButtonSize.ExtraSmallAndBlock)
-    @Html.ButtonSubmit("Warning", ButtonBootstrapStyle.Warning, Glyphicon.Ok, ButtonSize.Large)
-    @Html.ButtonSubmit("Danger", ButtonBootstrapStyle.Danger, Glyphicon.Ok, ButtonSize.LargeAndBlock)
-    @Html.ButtonSubmit("Link", ButtonBootstrapStyle.Link, Glyphicon.Ok, ButtonSize.Small)
-    @Html.ButtonSubmit("Link", ButtonBootstrapStyle.Link, Glyphicon.Ok, ButtonSize.SmallAndBlock)
-</div>
-
-<div>
-    @Html.ButtonSubmit("Default", true)
-    @Html.ButtonSubmit("Primary", ButtonBootstrapStyle.Primary, Glyphicon.Ok, ButtonSize.DefaultAndBlock, true)
-</div>
+    <div>
+        @Html.ButtonSubmit("Default", true)
+        @Html.ButtonSubmit("Primary", ButtonBootstrapStyle.Primary, Glyphicon.Ok, ButtonSize.DefaultAndBlock, true)
+    </div>
+</form>
