@@ -11,11 +11,14 @@ namespace WebApplication2.Controllers
     {
         public ActionResult Index()
         {
+            
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult About(string c)
         {
+            Session["TTBId"] = 0;
+            Session["TTBName"] = "Name";
             ViewBag.Message = "Your application description page.";
 
             return View();
